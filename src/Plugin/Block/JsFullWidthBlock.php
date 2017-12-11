@@ -57,6 +57,13 @@ class JsFullWidthBlock extends BlockBase implements BlockPluginInterface
             '#default_value' => isset($config['HeaderBgColor']) ? $config['HeaderBgColor'] : '',
         );
 
+        $form['js_fullwidth_text_color'] = array(
+            '#type' => 'textfield',
+            '#title' => $this->t('Text color'),
+            '#default_value' => isset($config['HeaderTextColor']) ? $config['HeaderTextColor'] : '',
+        );
+
+
         return $form;
 
     }
@@ -65,6 +72,7 @@ class JsFullWidthBlock extends BlockBase implements BlockPluginInterface
     {
         $this->configuration['HeaderText'] = $form_state->getValue('js_fullwidth_text');
         $this->configuration['HeaderBgColor'] = $form_state->getValue('js_fullwidth_bg_color');
+        $this->configuration['HeaderTextColor'] = $form_state->getValue('js_fullwidth_text_color');
     }
 
     public function defaultConfiguration()
@@ -73,7 +81,8 @@ class JsFullWidthBlock extends BlockBase implements BlockPluginInterface
 
         return array(
             'HeaderText' => $default_config->get('fullwidth.text'),
-            'HeaderBgColor' => $default_config->get('fullwidth.bgcolor')
+            'HeaderBgColor' => $default_config->get('fullwidth.bgcolor'),
+            'HeaderTextColor' => $default_config->get('fullwidth.textcolor')
         );
     }
 }

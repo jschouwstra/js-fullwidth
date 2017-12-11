@@ -16,7 +16,8 @@ function js_fullwidth_theme($existing, $type, $theme, $path)
     $items['js-fullwidth-block'] = array(
         'variables' => array(
             'HeaderText' => NULL,
-            'HeaderBgColor' => NULL
+            'HeaderBgColor' => NULL,
+            'TextColor' => NULL
         ),
         'path' => $path . '/templates',
     );
