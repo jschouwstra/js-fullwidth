@@ -48,11 +48,11 @@ class JsFullWidthBlock extends BlockBase implements BlockPluginInterface
 
     public function blockForm($form, FormStateInterface $form_state)
     {
+        $config = $this->getConfiguration();
         //New form
         $form = parent::blockForm($form, $form_state);
-        $config = $this->getConfiguration();
-
         $form['colorpicker']['#attached']['library'][] = 'js_fullwidth/colorpicker';
+
 
         $form['js_fullwidth_text'] = array(
             '#type' => 'textfield',
