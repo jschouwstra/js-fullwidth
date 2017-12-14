@@ -29,3 +29,8 @@ function js_fullwidth_theme($existing, $type, $theme, $path)
 
     return $items;
 }
+
+function js_fullwidth_page_attachments(array &$attachments) {
+    $attachments['#attached']['library'][] =
+        'js_fullwidth/colorpicker';
+}

@@ -6,7 +6,6 @@ $ = jQuery;
 
 
 $(document).ready(function () {
-    alert("colorpicker.js");
     $('.colorpicker_field').each(function () {
         //
         // Dear reader, it's actually very easy to initialize MiniColors. For example:

@@ -24,13 +24,13 @@ class JsFullWidthBlock extends BlockBase implements BlockPluginInterface
         if (!empty($config['HeaderText'])) {
             $header_text = $config['HeaderText'];
         } else {
-            $header_text = $this->t('No Text set');
+            $header_text = $this->t('');
         }
 
         if (!empty($config['HeaderBgColor'])) {
             $bg_color = $config['HeaderBgColor'];
         } else {
-            $bg_color = $this->t('No Text set');
+            $bg_color = $this->t('');
         }
 
         return array(
