@@ -11,7 +11,7 @@ colorpicker:
   dependencies:
     - core/drupal
     - core/jquery
-    - core/drupalSettings
+    - core/jquery.once
 #    - core/jquery.once
 #    - core/jquery.ui.draggable
 #    - core/jquery.ui.sortable

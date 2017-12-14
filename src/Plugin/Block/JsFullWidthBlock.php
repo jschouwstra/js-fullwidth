@@ -37,11 +37,6 @@ class JsFullWidthBlock extends BlockBase implements BlockPluginInterface
             '#theme' => 'js-fullwidth-block',
             '#HeaderText' => $header_text,
             '#HeaderBgColor' => $bg_color,
-            '#attached' => array(
-                'library' => array(
-                    'js_fullwidth/colorpicker',
-                ),
-            ),
 
         );
     }
