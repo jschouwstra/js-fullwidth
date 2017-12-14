@@ -3,3 +3,5 @@ type: module
 description: '[version 1.4] Add full width header as a Drupal block. '
 core: 8.x
 package: JS
+dependencies:
+  - block

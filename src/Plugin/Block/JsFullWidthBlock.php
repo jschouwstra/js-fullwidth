@@ -37,6 +37,12 @@ class JsFullWidthBlock extends BlockBase implements BlockPluginInterface
             '#theme' => 'js-fullwidth-block',
             '#HeaderText' => $header_text,
             '#HeaderBgColor' => $bg_color,
+            '#attached' => array(
+                'library' => array(
+                    'js_fullwidth/colorpicker',
+                ),
+            ),
+
         );
     }
 
@@ -46,21 +52,36 @@ class JsFullWidthBlock extends BlockBase implements BlockPluginInterface
         $form = parent::blockForm($form, $form_state);
         $config = $this->getConfiguration();
 
+        $form['colorpicker']['#attached']['library'][] = 'js_fullwidth/colorpicker';
+
         $form['js_fullwidth_text'] = array(
             '#type' => 'textfield',
             '#title' => $this->t('Header Text'),
             '#default_value' => isset($config['HeaderText']) ? $config['HeaderText'] : '',
         );
+
         $form['js_fullwidth_bg_color'] = array(
             '#type' => 'textfield',
             '#title' => $this->t('Background color'),
             '#default_value' => isset($config['HeaderBgColor']) ? $config['HeaderBgColor'] : '',
+            '#attributes' => array(
+                'class' => array(
+                    'colorpicker_field',
+                    'form-control'
+                )
+            ),
         );
 
         $form['js_fullwidth_text_color'] = array(
             '#type' => 'textfield',
             '#title' => $this->t('Text color'),
-            '#default_value' => isset($config['HeaderTextColor']) ? $config['HeaderTextColor'] : '',
+            '#default_value' => isset($config['HeaderTextColor']) ? $config['HeaderTextColor'] : '#000000',
+            '#attributes' => array(
+                'class' => array(
+                    'colorpicker_field',
+                    'form-control'
+                )
+            ),
         );
 
 

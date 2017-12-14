@@ -1,0 +1,27 @@
+colorpicker:
+  version: 1.x
+  css:
+    theme:
+      assets/css/jquery.minicolors.css: {}
+
+  js:
+    assets/js/jquery.minicolors.min.js: {preprocess: false}
+    assets/js/colorpicker.js: {preprocess: false}
+
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/drupalSettings
+    - core/jquery.once
+#    - core/jquery.ui.draggable
+#    - core/jquery.ui.sortable
+#    - core/jquery.ui.dropable
+#    - core/jquery.ui.dialog
+
+#    vendor/notify/notify.min.js: {}
+#    vendor/notify/styles/metro/notify-metro.js: {}
+#    vendor/jrange/nouislider.min.js: {}
+#    assets/js/upload/jquery.ui.widget.js: { }
+#    assets/js/upload/jquery.iframe-transport.js: { }
+#    assets/js/upload/jquery.fileupload.js: { }
+#    assets/js/upload/script.js: { }
