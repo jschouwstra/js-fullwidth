@@ -56,12 +56,11 @@ class JsFullWidthBlock extends BlockBase implements BlockPluginInterface
         );
 
         $form['js_fullwidth_bg_color'] = array(
-            '#type' => 'textfield',
+            '#type' => 'color',
             '#title' => $this->t('Background color'),
             '#default_value' => isset($config['HeaderBgColor']) ? $config['HeaderBgColor'] : '',
             '#attributes' => array(
                 'class' => array(
-                    'colorpicker_field',
                     'form-control'
                 )
             ),
