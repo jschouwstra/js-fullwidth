@@ -33,10 +33,18 @@ class JsFullWidthBlock extends BlockBase implements BlockPluginInterface
             $bg_color = $this->t('');
         }
 
+        if (!empty($config['HeaderTextColor'])) {
+            $text_color = $config['HeaderTextColor'];
+        } else {
+            $text_color = $this->t('');
+        }
+
+        //Render template with variables
         return array(
             '#theme' => 'js-fullwidth-block',
             '#HeaderText' => $header_text,
             '#HeaderBgColor' => $bg_color,
+            '#HeaderTextColor' => $text_color,
 
         );
     }
@@ -67,12 +75,11 @@ class JsFullWidthBlock extends BlockBase implements BlockPluginInterface
         );
 
         $form['js_fullwidth_text_color'] = array(
-            '#type' => 'textfield',
+            '#type' => 'color',
             '#title' => $this->t('Text color'),
-            '#default_value' => isset($config['HeaderTextColor']) ? $config['HeaderTextColor'] : '#000000',
+            '#default_value' => isset($config['HeaderTextColor']) ? $config['HeaderTextColor'] : '',
             '#attributes' => array(
                 'class' => array(
-                    'colorpicker_field',
                     'form-control'
                 )
             ),

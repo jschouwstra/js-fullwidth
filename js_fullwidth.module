@@ -17,7 +17,7 @@ function js_fullwidth_theme($existing, $type, $theme, $path)
         'variables' => array(
             'HeaderText' => NULL,
             'HeaderBgColor' => NULL,
-            'TextColor' => NULL,
+            'HeaderTextColor' => NULL,
             '#attached' => array(
                 'library' => array(
                     'js_fullwidth/colorpicker',
