@@ -1,6 +1,6 @@
 name: JS Full Width Header
 type: module
-description: '[version 1.4] Add full width header as a Drupal block. '
+description: '[version 1.6] Add a full width header by placing a Drupal block. '
 core: 8.x
 package: JS
 dependencies:
